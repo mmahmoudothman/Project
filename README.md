@@ -3,11 +3,7 @@ RssApp is RSS News reader app.
 The purpose of this project is to built an app to help users discover the news easliy from phone;
 
 ## ScreenShots
-![alt text](https://github.com/mmahmoudothman/RssApp/blob/master/e7ff5015-2026-485e-9903-f83e6a90fe3d.jpg)
-![alt text](https://github.com/mmahmoudothman/RssApp/blob/master/aadfe3c8-fa1c-414e-8b33-91ca5d637299.jpg)
-![alt text](https://github.com/mmahmoudothman/RssApp/blob/master/7727aef3-3205-4669-a43a-e4ee0b121ab9.jpg)
-![alt text](https://github.com/mmahmoudothman/RssApp/blob/master/17b5dcc4-0be5-4811-878a-89e60afd2d11.jpg)
-
+<img align="right" width="100" height="100" src="https://github.com/mmahmoudothman/RssApp/blob/master/e7ff5015-2026-485e-9903-f83e6a90fe3d.jpg">
 
 ## Features:
 * Get the Last New from Providers
@@ -50,3 +46,5 @@ App usesby default The List of Providers such sa:
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
+
+
