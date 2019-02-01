@@ -1,10 +1,12 @@
 package com.example.mahmoud.architectureexample;
 
 import android.app.AlertDialog;
+import android.arch.lifecycle.Observer;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,7 +27,12 @@ import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import androidx.work.Data;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
+import androidx.work.WorkStatus;
 import dmax.dialog.SpotsDialog;
 import io.paperdb.Paper;
 
@@ -48,6 +55,9 @@ public class ListNews extends AppCompatActivity {
     static String urlArticle = "";
     static String urlTitle = "";
 
+    private WorkManager mWorkManager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +65,10 @@ public class ListNews extends AppCompatActivity {
 
         //Init cache
         Paper.init(this);
+
+        mWorkManager = WorkManager.getInstance();
+
+
 
         dialog = new SpotsDialog(this);
         authNetworkOperation = new AuthNetworkOperation();
@@ -92,10 +106,8 @@ public class ListNews extends AppCompatActivity {
             urlArticle = getIntent().getStringExtra(URL_EXTRA);
             urlTitle = getIntent().getStringExtra(URL_TITLE);
 
-//            feedModel = (FeedModel) getIntent().getSerializableExtra(Intent.EXTRA_TEXT);
-//            url = feedModel.getFeed().getUrl();`
             loadNews(false);
-
+//            getWorkMangaer();
         }
     }
 
@@ -201,4 +213,73 @@ public class ListNews extends AppCompatActivity {
         Paper.book().write(urlTitle, new Gson().toJson(model));
 
     }
+
+
+
+//    public void getWorkMangaer(){
+//
+//        Data data = new Data.Builder()
+//                .putString(MyWorker.EXTRA_TITLE, urlTitle)
+//                .build();
+//
+//        PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(MyWorker.class, 15, TimeUnit.MINUTES)
+//                .setInputData(data)
+//                .build();
+//
+//
+//
+//
+//
+//        WorkManager.getInstance().enqueue(periodicWork);
+////        WorkManager.getInstance().getStatusById(periodicWork.getId())
+////                .observe(this, new Observer<WorkStatus>() {
+////                    @Override
+////                    public void onChanged(@Nullable WorkStatus workStatus) {
+//////                        if (workStatus != null) {
+//////                            textView.append("SimpleWorkRequest: " + workStatus.getState().name() + "\n");
+//////                        }
+////
+////                        if (workStatus != null && workStatus.getState().isFinished()) {
+////                            String message = workStatus.getOutputData().getString(MyWorker.EXTRA_OUTPUT_MESSAGE, "");
+////                            if (message.equals("") || message.isEmpty()) {
+////                                return;
+////                            }
+////
+////                            Log.e("response", message + " ");
+////                            }
+////                    }
+////                });
+//
+//
+//
+//
+//
+//
+//
+//        WorkManager.getInstance().getStatusById(periodicWork.getId())
+//                .observe(this, new Observer<WorkStatus>() {
+//                    @Override
+//                    public void onChanged(@Nullable WorkStatus workStatus) {
+//                        if (workStatus != null) {
+//                            Log.e("response", workStatus+ " ");
+//
+//                        }
+//
+//                        if (workStatus != null && workStatus.getState().isFinished()) {
+//                            String message = workStatus.getOutputData().getString(MyWorker.EXTRA_OUTPUT_MESSAGE, "Default message");
+//                            Log.e("response", message+ " ");
+//
+//                        }
+//                    }
+//                });
+//
+//
+//
+//
+//
+//
+//    }
+
 }
+
+
