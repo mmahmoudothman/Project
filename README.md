@@ -4,6 +4,9 @@ The purpose of this project is to built an app to help users discover the news e
 
 ## ScreenShots
 ![alt text](https://github.com/mmahmoudothman/RssApp/blob/master/e7ff5015-2026-485e-9903-f83e6a90fe3d.jpg)
+![alt text](https://github.com/mmahmoudothman/RssApp/blob/master/aadfe3c8-fa1c-414e-8b33-91ca5d637299.jpg)
+![alt text](https://github.com/mmahmoudothman/RssApp/blob/master/7727aef3-3205-4669-a43a-e4ee0b121ab9.jpg)
+![alt text](https://github.com/mmahmoudothman/RssApp/blob/master/17b5dcc4-0be5-4811-878a-89e60afd2d11.jpg)
 
 
 ## Features:
