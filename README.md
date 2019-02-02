@@ -13,16 +13,6 @@ The purpose of this project is to built an app to help users discover the news e
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Features:
 * Get the Last New from Providers
 * User can add new Providers(source of data).
@@ -47,6 +37,11 @@ App usesby default The List of Providers such sa:
 
 * [Picasso](http://square.github.io/picasso/) - A powerful library that handles image loading and caching in the app.
 * [Retrofit](http://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
+* [room](https://developer.android.com/topic/libraries/architecture/room) 
+* [Paper](https://github.com/pilgr/Paper) 
+* [diagonallayout](https://github.com/florent37/DiagonalLayout) 
+* [KenBurnsView](https://github.com/flavioarfaria/KenBurnsView) 
+* [CircleImageView](https://github.com/hdodenhof/CircleImageView) 
 
 
 ## License
