@@ -1,12 +1,12 @@
-# RssApp#
+# RssApp
 RssApp is RSS News reader app.
 The purpose of this project is to built an app to help users discover the news easliy from phone;
 
 ## ScreenShots
 
-<p>
-<img align="right" width="200" height="300" src="https://github.com/mmahmoudothman/RssApp/blob/master/image1.jpg"/>
-<img align="right" width="200" height="300" src="https://github.com/mmahmoudothman/RssApp/blob/master/image2.jpg"/>
+<p  align="center">
+<img align="left" width="200" height="300" src="https://github.com/mmahmoudothman/RssApp/blob/master/image1.jpg"/>
+<img align="centre" width="200" height="300" src="https://github.com/mmahmoudothman/RssApp/blob/master/image2.jpg"/>
 <img align="right" width="200" height="300" src="https://github.com/mmahmoudothman/RssApp/blob/master/image3.jpg"/>
 <img align="right" width="200" height="300" src="https://github.com/mmahmoudothman/RssApp/blob/master/image4.jpg"/>
 </p>
